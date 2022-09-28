@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>welcome</title>
+    </head>
+  <body>
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+            color:black;
+        }
+        .container{
+            padding: 20px 30px;
+            background:gray;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            background-color: aliceblue;
+        }
+        label,input,button{
+            font-size: large;
+            padding: 5px;
+            margin-top: 20px;
+            border-radius: 5%;
+            font-weight: bolder;
+        }
+        output{
+            font-weight: bolder;
+            font-size: xx-large;
+            margin-left: 20%;
+            background-color: bisque;
+            margin-top: 20px;
+        }
+        button:hover{
+            background-color: aqua;
+            padding-inline-start: 5% 10%;
+        }
+        input{
+            border-radius: 5%;
+            border-color: blueviolet;
+        }
+        button{
+            border-radius: 20%;
+            opacity: 20px;
+        }
+
+    </style>
+    <h1>Welcome</h1>
+    <h1>Addition/Multiplication/Division of Two Numbers</h1>
+    <div class="container">
+        <label>Enter a First Number:</label>
+        <input type="number" id="firstnum" placeholder="Enter a number"><br>
+        <label>Enter a Second Number:</label>
+        <input type="number" id="secondnum"placeholder="Enter a number"><br>
+        <h3><i>Press the Button Two Times!</i></h3>
+        <button id="addbtn" onclick="Addition()">Addition</button><br>
+        <button id="mulbtn" onclick="Multiplications()">Multiplication</button><br>
+        <button id="divbtn" onclick="Divisions()">Division</button><br>
+        <output></output>
+    </div>
+    <script>
+        let firstnumber=document.querySelector('#firstnum');
+        let secondnumber=document.querySelector('#secondnum');
+        let addbtn=document.querySelector('#addbtn');
+        let mulbtn=document.querySelector('#mulbtn');
+        let divbtn=document.querySelector('#divbtn');
+        let result=document.querySelector('output');
+        function Addition(){
+        addbtn.addEventListener('click',()=>
+        {
+            let total=parseFloat(firstnumber.value)+parseFloat(secondnumber.value);
+            result.innerHTML="Addition of Two Numbers is: "+total;
+        })
+    }
+    function Multiplications(){
+        mulbtn.addEventListener('click',()=>
+        {
+            let total=parseFloat(firstnumber.value)*parseFloat(secondnumber.value);
+            result.innerHTML="Multiplication of Two Numbers is: "+total;
+        })
+    }
+    function Divisions(){
+        divbtn.addEventListener('click',()=>
+        {
+            let total=parseFloat(firstnumber.value)/parseFloat(secondnumber.value);
+            result.innerHTML="Division of Two Numbers is: "+total;
+        })
+    }
+    </script>
+    <span><i>&copyDeveloped by Rohit</i></span>
+  </body>
+</html>
